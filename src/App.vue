@@ -1,32 +1,61 @@
 <template>
   <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view/>
+    <header>
+      <nav>
+        <ul>
+          <li><router-link to="/">Home</router-link></li>
+          <li><router-link to="/category1">Category 1</router-link></li>
+          <li><router-link to="/category2">Category 2</router-link></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <router-view></router-view>
+    </main>
+
+    <footer>
+      <p>Shopping Website &copy; 2025</p>
+    </footer>
   </div>
 </template>
 
-<style>
+<script>
+export default {
+  name: "App"
+};
+</script>
+
+<style scoped>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
 }
 
-nav {
-  padding: 30px;
+header {
+  background-color: #42b983;
+  padding: 10px;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 15px;
 }
 
 nav a {
-  font-weight: bold;
-  color: #2c3e50;
+  color: white;
+  text-decoration: none;
 }
 
-nav a.router-link-exact-active {
-  color: #42b983;
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #f1f1f1;
 }
 </style>
